@@ -87,9 +87,9 @@ const ProductTable = () => {
 							<Image
 								src={invoice.urlImage}
 								alt="image"
-								width={48}
-								height={48}
-								className="object-cover"
+								width={52}
+								height={52}
+								className="object-cover h-52 w-52"
 							/>
 						</TableCell>
 						<TableCell>{invoice.paymentMethod}</TableCell>
