@@ -14,9 +14,9 @@ const Items = () => {
 	return (
 		<div className="flex gap-2 overflow-auto [&::-webkit-scrollbar]:hidden">
 			{products.map((p) => (
-				<Card key={p.id} className="min-w-[167px] rounded-2xl">
+				<Card key={p.id} className="min-w-[300px] rounded-2xl">
 					<CardContent className="p-0 px-1 pt-1">
-						<div className="relative h-[159px] w-full">
+						<div className="h-[300px] w-full">
 							<Image
 								fill
 								className="object-cover rounded-2xl"
