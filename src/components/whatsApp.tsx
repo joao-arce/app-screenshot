@@ -4,13 +4,15 @@ import { Button } from './ui/button'
 
 const WhatsApp = () => {
 	return (
-		<div>
+		<div className="mt-4">
 			<a
 				href="whatsapp://send?text=eusoucorinthias"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<Button>WhatsApp</Button>
+				<Button className="bg-green-500 rounded-2xl text-white">
+					WhatsApp
+				</Button>
 			</a>
 		</div>
 	)
