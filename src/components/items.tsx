@@ -25,19 +25,35 @@ const Items = () => {
 							/>
 						</div>
 						<div className="py-2 px-1">
-							<h3 className="font-semibold truncate my-2">{p.name}</h3>
-							<p className="text-sm">
-								<span className="font-semibold">color:</span> {p.color}
-							</p>
-							<p className="text-sm">
-								<span className="font-semibold">Tamanho:</span> {p.size}
-							</p>
-							<p className="text-sm">
-								<span className="font-semibold">Marca:</span> {p.trand}
-							</p>
-							<p className="text-sm">
-								<span className="font-semibold">Estoque:</span> {p.storage}
-							</p>
+							<h3 className="text-lg font-semibold text-center truncate my-2">
+								{p.name}
+							</h3>
+							<div className="flex items-center text-lg ">
+								<p className="w-[40%]">
+									<span className="font-semibold">Cor:</span>
+								</p>
+								<p>{p.color}</p>
+							</div>
+							<div className="flex items-center text-lg ">
+								<p className="w-[40%]">
+									<span className="font-semibold">Tamanho:</span>
+								</p>
+								<p>{p.size}</p>
+							</div>
+
+							<div className="flex items-center text-lg ">
+								<p className="w-[40%]">
+									<span className="font-semibold">Marca:</span>
+								</p>
+								<p>{p.trand}</p>
+							</div>
+
+							<div className="flex items-center text-lg ">
+								<p className="w-[40%]">
+									<span className="font-semibold">Estoque:</span>
+								</p>
+								<p>{p.storage}</p>
+							</div>
 						</div>
 					</CardContent>
 				</Card>
