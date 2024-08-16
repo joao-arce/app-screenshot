@@ -12,7 +12,7 @@ type ProductType = {
 	name: string
 }
 
-const images = ['/sport-01.png', '/sport-02.png', '/sport-03.png']
+const images = ['./sport-01.png', './sport-02.png', './sport-03.png']
 
 const deviceToken = '130cbcb4-94a4-440b-a374-8adf8a68d2d2'
 const authorizationToken =
