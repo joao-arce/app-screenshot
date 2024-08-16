@@ -50,7 +50,7 @@ const Items = () => {
 			}
 		} catch (error) {
 			console.error('Erro ao enviar imagem:', error)
-			setResponseMessage('Erro ao enviar imagens via WhatsApp.')
+			setResponseMessage(`Erro ao enviar imagens via WhatsApp. ${error}`)
 		}
 	}
 	return (
@@ -102,8 +102,16 @@ const Items = () => {
 					</Card>
 				))}
 			</div>
-			<div className="">
-				<Button onClick={handleClick}>Enviar</Button>
+			<div className="mt-4 ">
+				<Button
+					className="bg-emerald-600 hover:bg-emerald-400 text-white"
+					onClick={handleClick}
+				>
+					Enviar
+				</Button>
+			</div>
+			<div>
+				<p>Mensagem: {responseMessage}</p>
 			</div>
 		</div>
 	)
