@@ -1,0 +1,62 @@
+const [whatsappNumber, setWhatsappNumber] = useState('');
+const [responseMessage, setResponseMessage] = useState('');
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  const deviceToken = '130cbcb4-94a4-440b-a374-8adf8a68d2d2';
+  const authorizationToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3BsYXRhZm9ybWEuYXBpYnJhc2lsLmNvbS5ici9zb2NpYWwvZ29vZ2xlL2NhbGxiYWNrIiwiaWF0IjoxNzIyNDI3MTQ3LCJleHAiOjE3NTM5NjMxNDcsIm5iZiI6MTcyMjQyNzE0NywianRpIjoiYzZwWmhFVW45bzdKdjZvTiIsInN1YiI6IjEwNTU5IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.MHcdnfA1R_I9DxALkXeXe8F7zXO1eWI8fsH5_Gh8IuI';
+
+  const images = [
+    "http://extremebet.com.br/EnvioWhatsapp/imagem1.jpg",
+    "http://extremebet.com.br/EnvioWhatsapp/imagem2.jpg",
+    "http://extremebet.com.br/EnvioWhatsapp/imagem3.jpg"
+  ];
+
+  try {
+    for (const imagePath of images) {
+      const payload = {
+        number: whatsappNumber,
+        path: imagePath
+      };
+
+      const response = await fetch('https://cluster.apigratis.com/api/v2/whatsapp/sendFile', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'DeviceToken': deviceToken,
+          'Authorization': `Bearer ${authorizationToken}`
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+      setResponseMessage((prev) => prev + `Resposta da API para a imagem: ${imagePath} - ${JSON.stringify(data)}\n`);
+    }
+  } catch (error) {
+    console.error('Erro ao enviar imagem:', error);
+    setResponseMessage('Erro ao enviar imagens via WhatsApp.');
+  }
+};
+
+return (
+  <div className="container">
+    <form onSubmit={handleSubmit}>
+      <div className="form-group">
+        <input
+          type="text"
+          name="whatsappNumber"
+          id="whatsappNumber"
+          placeholder="Digite o número de WhatsApp com código do país, ex: 5511999999999"
+          value={whatsappNumber}
+          onChange={(e) => setWhatsappNumber(e.target.value)}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <button type="submit" className="whatsapp-button">Enviar via WhatsApp</button>
+      </div>
+    </form>
+    <img src="/imagem1.jpg" alt="Imagem 1" className="image" width="300" />
+    <img src="/imagem2.jpg" alt="Imagem 2" className="image" width="300" />
+    <img src="/imagem3.jpg" alt="Imagem 3" className="image" width="300" />
