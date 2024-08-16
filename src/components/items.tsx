@@ -14,9 +14,9 @@ type ProductType = {
 
 // const images = ['./sport-01.png', './sport-02.png', './sport-03.png']
 const images = [
-	'https://utfs.io/f/c97a2dc9-cf62-468b-a851-bfd2bdde775f-16p.png',
-	'https://utfs.io/f/45331760-899c-4b4b-910e-e00babb6ed81-16q.png',
-	'https://utfs.io/f/5832df58-cfd7-4b3f-b102-42b7e150ced2-16r.png',
+	'http://extremebet.com.br/EnvioWhatsapp/imagem1.jpg',
+	'http://extremebet.com.br/EnvioWhatsapp/imagem2.jpg',
+	'http://extremebet.com.br/EnvioWhatsapp/imagem3.jpg',
 ]
 
 const deviceToken = '130cbcb4-94a4-440b-a374-8adf8a68d2d2'

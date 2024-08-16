@@ -1,7 +1,7 @@
 export const products = [
 	{
 		id: 101,
-		urlImage: 'https://utfs.io/f/c97a2dc9-cf62-468b-a851-bfd2bdde775f-16p.png',
+		urlImage: 'http://extremebet.com.br/EnvioWhatsapp/imagem1.jpg',
 		name: 'Sapato',
 		size: 35,
 		color: 'Nude',
@@ -11,7 +11,8 @@ export const products = [
 	},
 	{
 		id: 102,
-		urlImage: 'https://utfs.io/f/45331760-899c-4b4b-910e-e00babb6ed81-16q.png',
+		urlImage: 'http://extremebet.com.br/EnvioWhatsapp/imagem2.jpg',
+
 		name: 'Sandalha',
 		color: 'Preta',
 		trand: 'Via Marte',
@@ -20,7 +21,8 @@ export const products = [
 	},
 	{
 		id: 103,
-		urlImage: 'https://utfs.io/f/5832df58-cfd7-4b3f-b102-42b7e150ced2-16r.png',
+		urlImage: 'http://extremebet.com.br/EnvioWhatsapp/imagem3.jpg',
+
 		name: 'Rasteira',
 		color: 'Branca',
 		trand: 'Via Marte',
